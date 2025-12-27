@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/* ---------- PAGE BACKGROUND ---------- */
+body {
+    margin: 0;
+    min-height: 100vh;
+ background: #FCC467 url('images/background.jpg') no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #f3b45b;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    margin-top: 25px;
+    width:100%;
+    padding-bottom:20px;
+    font-size: 19px;
+    color: #ffffff;
+    text-align: center;
+    background: #774F00;
+    padding: 12px 0;
+    font-weight: bold;
+}
+
+
+/* ---------- PAGE TITLE ---------- */
+h1 {
+    font-size: 44px;        /* slightly smaller heading */
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* ---------- WHITE FORM BOX ---------- */
+form {
+    width: 58%;             /* reduced more */
+    max-width: 800px;       /* smaller max width */
+    min-height: 300px;
+
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 45px;
+    padding: 50px 60px;     /* reduced padding */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+/* ---------- FORM ROW ---------- */
+.form-group {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ---------- LABEL (LEFT) ---------- */
+.form-label {
+    width: 44%;
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+}
+
+/* ---------- INPUT (RIGHT) ---------- */
+.form-control {
+    width: 56%;
+    height: 50px;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 2px solid #444;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #000;
+}
+
+/* ---------- ADD ADMIN BUTTON ---------- */
+.btn {
+    margin-top: 20px;
+    margin-bottom:5pxpx;
+    margin-right:20px;
+    padding: 14px 20px;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    background: #F3B45B;
+    color: #000;
+
+    border: 2px solid #000;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #000;
+    color: #f3b45b;
+}
+
+/* ---------- ERROR MESSAGE ---------- */
+p {
+    font-size: 30px;
+    font-weight: 900;
+    color: red;
+    margin-bottom: 18px;
+}

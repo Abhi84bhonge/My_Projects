@@ -1,0 +1,285 @@
+/* ---------- BASIC SETUP ---------- */
+body {
+  background: #FCC467 url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+.footer {
+    margin-top: 25px;
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size: 19px;
+    color: #ffffff;
+    text-align: center;
+    background: #774F00;
+    
+    font-weight: bold;
+}
+h1 {
+  color: #000000;
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 10px;
+  margin-top:30px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* ---------- PANDA CONTAINER ---------- */
+.panda {
+  position: relative;
+  width: 200px;
+  margin: 40px auto 0 auto;
+  transition: all 0.3s ease;
+}
+
+.face {
+  width: 200px;
+  height: 200px;
+  
+  background: #fff;
+  border-radius: 50%;
+  margin: 40px auto;
+  box-shadow: 0 10px 15px rgba(0,0,0,.15);
+  position: relative;
+  z-index: 10;
+}
+
+/* ---------- EARS ---------- */
+.ear {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #000;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  left: -15px;
+  top: -15px;
+}
+
+.ear::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #000;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  left: 125px;
+  top: -10px;
+}
+
+/* ---------- EYES ---------- */
+.eye-shade {
+  background: #000;
+  width: 50px;
+  height: 80px;
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  border-radius: 25px;
+  transform: rotate(220deg);
+  transition: all 0.3s ease;
+}
+
+.eye-shade.rgt {
+  left: auto;
+  right: 30px;
+  transform: rotate(140deg);
+}
+
+.eye-white {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  top: 85px;
+  left: 40px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.eye-white.rgt {
+  left: auto;
+  right: 40px;
+}
+
+.eye-ball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  left: 10px;
+  top: 10px;
+}
+
+/* Eye Closed State */
+.panda.close-eyes .eye-white {
+  height: 4px;
+  width: 30px;
+  top: 100px;
+  background: #000;
+  border-radius: 2px;
+}
+
+.panda.close-eyes .eye-ball {
+  opacity: 0;
+}
+
+/* ---------- NOSE ---------- */
+.nose {
+  position: absolute;
+  width: 35px;
+  height: 20px;
+  background: #000;
+  border-radius: 20px;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* ---------- HANDS ---------- */
+.hand {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  top: -25px;
+  left: 35px;
+  transition: all 0.4s ease-in-out;
+  z-index: 20;
+}
+
+.hand.rgt {
+  left: auto;
+  right: 35px;
+}
+
+form.up .hand {
+  transform: translateY(-80px) scale(2.2);
+}
+
+form.up .hand.rgt {
+  transform: translateY(-80px) scale(2.2);
+}
+
+/* ---------- LOGIN FORM ---------- */
+form {
+  max-width: 500px;
+  padding: 20px 35px;
+  background: #ffffff;
+  height: 330px;
+  margin: 25px auto;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  transform: translateY(-90px);
+  border-radius: 10px;
+  position: relative;
+}
+
+form.up {
+  transform: translateY(-130px);
+}
+
+/* ---------- INPUT STYLING ---------- */
+.form-group {
+  position: relative;
+  margin-top: 25px;
+}
+
+.form-control {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-bottom: 2px solid #000000;
+  outline: none;
+  font-size: 15px;
+  padding: 5px 0;
+  background: transparent;
+  color: #000000;
+}
+
+.form-control:focus {
+  border-bottom: 2px solid #FCC467;
+}
+
+.form-label {
+  position: absolute;
+  top: 5px;
+  font-size:20px;
+  left: 0;
+  transition: 0.3s;
+  color: #000000;
+  pointer-events: none;
+  font-weight: 900;
+}
+
+.form-control:focus + .form-label,
+.form-control:valid + .form-label {
+  font-size: 13px;
+  color: #FCC467;
+  transform: translateY(-25px);
+}
+
+/* ---------- BUTTON GROUP (NEW CHANGE) ---------- */
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* ---------- BUTTON ---------- */
+.btn1 {
+  margin-top:10px;
+  margin-left:210px;
+  background: #FCC467;
+  min-width: 90px;
+  height: 36px;
+  border: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 0 14px;
+}
+.btn {
+  margin-top:4px;
+  margin-left: 10px;
+  background: #FCC467;
+  min-width: 90px;
+  height: 36px;
+  border: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 0 14px;
+}
+
+.btn1:hover{
+	filter:brightness(0.9);
+	transform:scale(1.05);
+}
+.btn:hover {
+  filter: brightness(0.9);
+  transform: scale(1.05);
+}
+
+/* ---------- LINK BUTTON ---------- */
+.link-btn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

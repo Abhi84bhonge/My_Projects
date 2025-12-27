@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* ---------- PAGE BACKGROUND ---------- */
+body {
+    margin: 0;
+    min-height: 80vh; /* smaller than full height */
+    background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- NAVIGATION CONTAINER ---------- */
+.container {
+    width: 60%;            /* smaller width */
+    max-width: 700px;      /* reduced max width */
+    min-height: 300px;     /* reduced height */
+
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 35px;
+
+    padding: 30px 40px;    /* reduced padding */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- CONTAINER TITLE ---------- */
+.container h2 {
+    font-size: 32px;       /* slightly smaller */
+    font-weight: 900;
+    margin-bottom: 25px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+/* ---------- BUTTON STYLE ---------- */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+
+    width: 60%;             /* smaller width */
+    max-width: 350px;       /* reduced max width */
+    margin: 10px 0;         /* reduced margin */
+    padding: 12px 18px;     /* slightly smaller padding */
+
+    font-size: 18px;        /* smaller font */
+    font-weight: 800;
+
+    background: #F3B45B;
+    color: #000;
+
+    border: 2px solid #000;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* ---------- BUTTON HOVER ---------- */
+.btn:hover {
+    background: #000;
+    color: #f3b45b;
+}
+
+
