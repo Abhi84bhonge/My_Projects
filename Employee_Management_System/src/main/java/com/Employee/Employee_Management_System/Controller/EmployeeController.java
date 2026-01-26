@@ -14,9 +14,14 @@ import com.Employee.Employee_Management_System.Service.EmployeeService;
 @Controller
 public class EmployeeController {
 
-	@Autowired
-	private EmployeeService service;
+	
+	private final EmployeeService service;
 
+	
+	private EmployeeController(EmployeeService service) {
+		this.service=service;
+	}
+	
 	@GetMapping("/index")
 	public String get() {
 		return "index";
